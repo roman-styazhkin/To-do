@@ -1,0 +1,12 @@
+.select-item {
+  cursor: pointer;
+  color: #fff;
+}
+
+.uk-button {
+  color: #fff !important;
+}
+
+.uk-nav-header--active {
+  font-weight: 700;
+}

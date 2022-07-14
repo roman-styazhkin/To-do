@@ -1,0 +1,16 @@
+.form {
+  margin-bottom: 70px;
+}
+
+.form-item {
+  max-width: 900px;
+  margin: 0 auto 50px;
+  padding: 50px 100px;
+  box-shadow: 0 5px 15px rgb(0 0 0 / 15%);
+  background-color: #fff;
+}
+
+.uk-textarea.form-textarea {
+  width: 100%;
+  resize: vertical;
+}
