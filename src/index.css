@@ -9,6 +9,11 @@
   --accent-color: #1e87f0;
   --main-bg:  #fff;
   --main-color: #5a5656;
+
+  /* --body-bg: #22272e;
+  --accent-color: #2d333b;
+  --main-bg:  #2d333b;
+  --main-color: #fff; */
 }
 
 body {
@@ -16,4 +21,9 @@ body {
   width: 100%;
   min-height: 100vh;
   padding-bottom: 100px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
 }
