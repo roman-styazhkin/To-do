@@ -1,0 +1,8 @@
+.uk-nav-header.select-elem {
+  background-color: var(--main-bg);
+  color: var(--main-color);
+}
+
+.uk-nav-header.select-elem:hover {
+  text-decoration: underline;
+}

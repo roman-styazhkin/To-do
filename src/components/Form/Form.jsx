@@ -8,7 +8,7 @@ const Form = () => {
         <legend className="uk-legend">Task form</legend>
 
         <div className="uk-margin">
-          <input className="uk-input" type="text" placeholder="Task title" />
+          <input className="uk-input form-input" type="text" placeholder="Task title" />
         </div>
 
         <div className="uk-margin">

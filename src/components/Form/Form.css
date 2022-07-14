@@ -7,10 +7,20 @@
   margin: 0 auto 50px;
   padding: 50px 100px;
   box-shadow: 0 5px 15px rgb(0 0 0 / 15%);
-  background-color: #fff;
+  background-color: var(--main-bg);
+  color: var(--main-color);
 }
 
 .uk-textarea.form-textarea {
   width: 100%;
   resize: vertical;
+  background-color: var(--main-bg);
+}
+
+.uk-input.form-input {
+  background-color: var(--main-bg);
+}
+
+.uk-button.uk-button-primary {
+  color: #fff;
 }

@@ -2,7 +2,6 @@ import "./Tasks.css";
 import { useState } from "react";
 import TaskItem from "../TaskItem/TaskItem";
 import Container from "../Container/Container";
-import ToDoService from "../../data/ToDoService";
 
 const Tasks = ({ tasks }) => {
   const [items, setItems] = useState([])

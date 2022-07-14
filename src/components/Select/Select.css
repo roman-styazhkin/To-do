@@ -1,12 +1,24 @@
 .select-item {
   cursor: pointer;
   color: #fff;
+  background-color: var(--main-bg);
+  color: var(--main-color);
+}
+
+.uk-nav.uk-dropdown-nav {
+  background-color: var(--main-bg);
+  color: var(--main-color);
 }
 
 .uk-button {
-  color: #fff !important;
+  color: var(--main-color);
 }
 
 .uk-nav-header--active {
   font-weight: 700;
+}
+
+.select-box {
+  background-color: var(--main-bg);
+  color: var(--main-color);
 }

@@ -10,7 +10,7 @@ const TaskItem = ({ name, body, email }) => {
   return (
     <div className="uk-card uk-card-default uk-card-body uk-width-1-2@m task-item">
       <button className="uk-card-badge uk-label" type="button">delete</button>
-      <h3 className="uk-card-title">{taskTitle}</h3>
+      <h3 className="uk-card-title task-title">{taskTitle}</h3>
       <p>{body}</p>
     </div>
   )
