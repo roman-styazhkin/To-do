@@ -1,21 +1,22 @@
 import "./Tasks.css";
 import TaskItem from "../TaskItem/TaskItem";
 import Container from "../Container/Container";
+import TasksEmpty from "./TasksEmpty";
 
 const Tasks = ({ tasks }) => {
 
-  if (!tasks.length) {
-    return;
-  }
+  const renderElems = () => {
+    const elems = tasks.map((item) => (
+      <TaskItem key={item.id} {...item} />
+    ))
 
-  const elems = tasks.map((item) => (
-    <TaskItem key={item.id} {...item} />
-  ))
+    return elems;
+  }
 
   return (
     <section className="tasks">
       <Container className="tasks__inner">
-        {elems}
+        {!tasks.length ? <TasksEmpty /> : renderElems()}
       </Container>
     </section >
   )
