@@ -6,9 +6,9 @@ import TasksEmpty from "./TasksEmpty";
 const Tasks = ({ tasks }) => {
 
   const renderElems = () => {
-    const elems = tasks.map((item) => (
-      <TaskItem key={item.id} {...item} />
-    ))
+    const elems = tasks.map((item) => {
+      return <TaskItem key={item.id} {...item} />
+    })
 
     return elems;
   }

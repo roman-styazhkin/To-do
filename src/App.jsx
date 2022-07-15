@@ -7,17 +7,32 @@ import { useState } from "react";
 const App = () => {
   const [, setAppTheme] = useState("");
   const themes = new ThemeService();
-  const [appTasks, setAppTasks] = useState({});
+  const userTasks = JSON.parse(localStorage.getItem("user-tasks")) || [];
+  const [appTasks, setAppTasks] = useState(userTasks);
 
-  const tasks = 1;
+  const uid = () => {
+    let a = new Uint32Array(3);
+    window.crypto.getRandomValues(a);
+    return (performance.now().toString(36) + Array.from(a).map(A => A.toString(36)).join("")).replace(/\./g, "");
+  }
 
   const onSetAppTheme = (themeName) => {
     setAppTheme(themeName)
     localStorage.setItem("appTheme", themeName)
   }
 
-  const getFormTask = (task) => {
+  const getFormTask = (name, body) => {
+    const newObjTask = {
+      id: uid(),
+      name,
+      body,
+    }
 
+    setAppTasks((prevState) => {
+      const newData = [newObjTask, ...prevState]
+      localStorage.setItem("user-tasks", JSON.stringify(newData));
+      return newData;
+    });
   }
 
   return (
@@ -26,7 +41,7 @@ const App = () => {
         setSelectedTheme={themes.setSelectedTheme}
         onSetAppTheme={onSetAppTheme} />
       <Form getFormTask={getFormTask} />
-      <Tasks tasks={tasks} />
+      <Tasks tasks={appTasks} />
     </div >
   )
 }

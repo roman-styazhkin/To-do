@@ -1,3 +1,5 @@
+import "./Cancel.css";
+
 const Cancel = ({ onClickCancel }) => {
   return (
     <button

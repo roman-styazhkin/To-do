@@ -1,6 +1,6 @@
 import FormActions from "./FormActions";
 
-const FormContent = ({ onInputChange, onClickCancel }) => {
+const FormContent = ({ onInputChange, onClickCancel, formData }) => {
   return (
     <>
       <fieldset className="uk-fieldset">
@@ -14,6 +14,7 @@ const FormContent = ({ onInputChange, onClickCancel }) => {
             name="name"
             onChange={onInputChange}
             autoComplete="off"
+            value={formData.name}
             required />
         </div>
 
@@ -24,6 +25,7 @@ const FormContent = ({ onInputChange, onClickCancel }) => {
             name="body"
             onChange={onInputChange}
             autoComplete="off"
+            value={formData.body}
           />
         </div>
       </fieldset>
