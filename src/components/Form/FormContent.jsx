@@ -23,6 +23,7 @@ const FormContent = ({ onInputChange, onClickCancel, formData }) => {
             className="uk-textarea form-textarea"
             placeholder="Task description"
             name="body"
+            type="text"
             onChange={onInputChange}
             autoComplete="off"
             value={formData.body}

@@ -11,12 +11,12 @@ class ThemeService {
     '--accent-color': '#2d333b',
     '--main-bg': '#2d333b',
     '--main-color': '#fff',
-  }
+  };
 
   setSelectedTheme = (themeName) => {
     Object.entries(this[themeName]).forEach(([key, value]) => {
       document.body.style.setProperty(key, value)
-    })
+    });
   }
 
   initAppTheme = () => {
@@ -25,6 +25,6 @@ class ThemeService {
   }
 }
 
-new ThemeService().initAppTheme()
+new ThemeService().initAppTheme();
 
 export default ThemeService;

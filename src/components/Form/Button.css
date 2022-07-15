@@ -2,3 +2,7 @@
   margin: 0 auto;
   display: block;
 }
+
+.main-button:hover {
+  color: #fff;
+}

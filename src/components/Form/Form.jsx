@@ -33,6 +33,7 @@ const Form = ({ getFormTask }) => {
 
   const onFormSubmit = (e) => {
     e.preventDefault();
+    console.log(1);
     getFormTask(formData.name, formData.body);
     setFormData({
       name: "",
@@ -42,7 +43,11 @@ const Form = ({ getFormTask }) => {
 
   return (
     <form className="form-item" onSubmit={onFormSubmit}>
-      {visible ? <FormContent onInputChange={onInputChange} formData={formData} onClickCancel={onClickCancel} /> :
+      {visible ?
+        <FormContent
+          onInputChange={onInputChange}
+          formData={formData}
+          onClickCancel={onClickCancel} /> :
         <Button onClickVisible={onClickVisible} />}
     </form>
   )
