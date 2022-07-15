@@ -1,19 +1,23 @@
 import Header from "./components/Header/Header";
 import Form from "./components/Form/Form";
 import Tasks from "./components/Tasks/Tasks";
-import ToDoService from "./service/ToDoService";
 import ThemeService from "./service/ThemeService";
 import { useState } from "react";
 
 const App = () => {
   const [, setAppTheme] = useState("");
-
-  const tasks = new ToDoService().getToDoResponse();
   const themes = new ThemeService();
+  const [appTasks, setAppTasks] = useState({});
+
+  const tasks = 1;
 
   const onSetAppTheme = (themeName) => {
     setAppTheme(themeName)
     localStorage.setItem("appTheme", themeName)
+  }
+
+  const getFormTask = (task) => {
+    setAppTasks();
   }
 
   return (
@@ -21,7 +25,7 @@ const App = () => {
       <Header
         setSelectedTheme={themes.setSelectedTheme}
         onSetAppTheme={onSetAppTheme} />
-      <Form />
+      <Form getFormTask={getFormTask} />
       <Tasks tasks={tasks} />
     </div >
   )

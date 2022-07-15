@@ -15,10 +15,12 @@
   width: 100%;
   resize: vertical;
   background-color: var(--main-bg);
+  color: var(--main-color);
 }
 
 .uk-input.form-input {
   background-color: var(--main-bg);
+  color: var(--main-color);
 }
 
 .uk-button.uk-button-primary {

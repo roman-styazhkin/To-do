@@ -1,6 +1,6 @@
 import "./TaskItem.css";
 
-const TaskItem = ({ name, body, email }) => {
+const TaskItem = ({ name, body }) => {
   const taskTitle = name[0].toUpperCase() + name.slice(1);
 
   if (body.length > 150) {

@@ -21,7 +21,7 @@ class ThemeService {
 
   initAppTheme = () => {
     const themeName = localStorage.getItem("appTheme") || "dark";
-    this.setSelectedTheme(themeName)
+    this.setSelectedTheme(themeName);
   }
 }
 

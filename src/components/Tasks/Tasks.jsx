@@ -1,13 +1,16 @@
 import "./Tasks.css";
-import { useState } from "react";
 import TaskItem from "../TaskItem/TaskItem";
 import Container from "../Container/Container";
 
 const Tasks = ({ tasks }) => {
-  const [items, setItems] = useState([])
 
-  tasks.then((data) => setItems(data));
-  const elems = items.slice(0, 10).map((item) => <TaskItem key={item.id} {...item} />);
+  if (!tasks.length) {
+    return;
+  }
+
+  const elems = tasks.map((item) => (
+    <TaskItem key={item.id} {...item} />
+  ))
 
   return (
     <section className="tasks">
