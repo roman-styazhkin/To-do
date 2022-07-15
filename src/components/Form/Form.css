@@ -16,11 +16,13 @@
   resize: vertical;
   background-color: var(--main-bg);
   color: var(--main-color);
+  min-height: 120px;
 }
 
-.uk-input.form-input {
-  background-color: var(--main-bg);
-  color: var(--main-color);
+.uk-textarea.form-textarea--name {
+  resize: none;
+  height: 40px;
+  min-height: 40px;
 }
 
 .uk-button.uk-button-primary {

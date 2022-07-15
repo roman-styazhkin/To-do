@@ -17,7 +17,7 @@ const App = () => {
   }
 
   const getFormTask = (task) => {
-    setAppTasks();
+
   }
 
   return (
